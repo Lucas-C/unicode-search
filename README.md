@@ -2,6 +2,10 @@
 
 Command-line interface to search UTF8 characters by name from a JSON cache, without requiring an Internet connection.
 
+https://www.npmjs.com/package/unicode-search
+
+Inspired by https://github.com/eversport/node-unicodetable
+
 
 ## Installation
 
