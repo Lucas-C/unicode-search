@@ -47,7 +47,8 @@ The following is for your quick reference (may not be the latest version):
   Options:
 
     -V, --version          output the version number
+    -b, --block [name]     Filter by block name, e.g. "Emoticon"
     -c, --category [name]  Filter by category name, e.g. "So"
+    -k, --keys [keys]      Output only the selected field(s), e.g. "name,string"
     -h, --help             output usage information
-
 ```

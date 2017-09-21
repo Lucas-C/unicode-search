@@ -9,12 +9,11 @@
     "unicode-search": "./unicode-search.bundle.js"
   },
   "scripts": {
-    "upgrade": "yarn upgrade --latest",
-    "transpile": "babel ./generateDistJsons.js --out-file ./generateDistJsons.bundle.js && babel ./unicode-search.js --out-file ./unicode-search.bundle.js",
+    "test": "standard",
     "prepublish": "npm run transpile && npm run generateDistJsons",
-    "download": "wget \"https://unicode.org/Public/10.0.0/ucd/UnicodeData.txt\" -O UnicodeData.txt && wget \"https://unicode.org/Public/10.0.0/ucd/Blocks.txt\" -O Blocks.txt",
+    "transpile": "babel ./generateDistJsons.js --out-file ./generateDistJsons.bundle.js && babel ./unicode-search.js --out-file ./unicode-search.bundle.js",
     "generateDistJsons": "npm run download && node generateDistJsons.bundle.js",
-    "unicode-search": "node unicode-search.bundle.js"
+    "download": "wget \"https://unicode.org/Public/10.0.0/ucd/UnicodeData.txt\" -O UnicodeData.txt && wget \"https://unicode.org/Public/10.0.0/ucd/Blocks.txt\" -O Blocks.txt"
   },
   "dependencies": {
     "commander": "==2.11.0"
