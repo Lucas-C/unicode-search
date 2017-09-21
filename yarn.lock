@@ -671,9 +671,9 @@ browserslist@^2.1.2:
 
 "bufferjs@>= 2.0.0":
   version "3.0.1"
-  resolved "http://nexus/content/groups/NPM-all/bufferjs/-/bufferjs-3.0.1.tgz#0692e829cb10a10550e647390b035eb06c38e8ef"
+  resolved "https://registry.yarnpkg.com/bufferjs/-/bufferjs-3.0.1.tgz#0692e829cb10a10550e647390b035eb06c38e8ef"
 
-"bufferstream@>= 0.6.2":
+bufferstream@^0.6.2:
   version "0.6.2"
   resolved "http://nexus/content/groups/NPM-all/bufferstream/-/bufferstream-0.6.2.tgz#a5f27e10d3c760084d14b35126615007319e3731"
   dependencies:
@@ -683,7 +683,7 @@ browserslist@^2.1.2:
 
 "buffertools@>= 1.0.3":
   version "2.1.6"
-  resolved "http://nexus/content/groups/NPM-all/buffertools/-/buffertools-2.1.6.tgz#30c19b085636b88df692aeefeea0ff156780e916"
+  resolved "https://registry.yarnpkg.com/buffertools/-/buffertools-2.1.6.tgz#30c19b085636b88df692aeefeea0ff156780e916"
 
 builtin-modules@^1.1.1:
   version "1.1.1"
@@ -760,7 +760,7 @@ combined-stream@^1.0.5, combined-stream@~1.0.5:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@^2.11.0:
+commander@==2.11.0, commander@^2.11.0:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.11.0.tgz#157152fd1e7a6c8d98a5b715cf376df928004563"
 
@@ -2487,10 +2487,6 @@ typedarray@^0.0.6:
 uid-number@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/uid-number/-/uid-number-0.0.6.tgz#0ea10e8035e8eb5b8e4449f06da1c730663baa81"
-
-"unicode@== 10.0.0":
-  version "10.0.0"
-  resolved "http://nexus/content/groups/NPM-all/unicode/-/unicode-10.0.0.tgz#e5d51c1db93b6c71a0b879e0b0c4af7e6fdf688e"
 
 uniq@^1.0.1:
   version "1.0.1"
