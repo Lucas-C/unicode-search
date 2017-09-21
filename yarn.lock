@@ -675,7 +675,7 @@ browserslist@^2.1.2:
 
 bufferstream@^0.6.2:
   version "0.6.2"
-  resolved "http://nexus/content/groups/NPM-all/bufferstream/-/bufferstream-0.6.2.tgz#a5f27e10d3c760084d14b35126615007319e3731"
+  resolved "https://registry.yarnpkg.com/bufferstream/-/bufferstream-0.6.2.tgz#a5f27e10d3c760084d14b35126615007319e3731"
   dependencies:
     bufferjs ">= 2.0.0"
   optionalDependencies:

@@ -8,6 +8,8 @@ https://www.npmjs.com/package/unicode-search
 
 Inspired by https://github.com/eversport/node-unicodetable
 
+Online, I would recommend to use this tag-based searched: http://graphemica.com/characters/tags/
+
 
 ## Installation
 
@@ -25,7 +27,7 @@ npm install -g unicode-search
 ## Usage
 
 ```
-unicode-search -c So "check mark"
+unicode-search -b Emoticons -k name,string "check mark"
 ```
 
 ### Options

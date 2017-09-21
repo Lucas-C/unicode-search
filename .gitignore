@@ -1,4 +1,5 @@
 /node_modules/
+/Blocks.*
 /UnicodeData.*
 /*.bundle.js
 /yarn-error.log

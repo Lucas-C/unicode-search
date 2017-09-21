@@ -1,6 +1,6 @@
 {
   "name": "unicode-search",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Command-line interface to search unicode characters by keywords",
   "license": "GPL-3.0",
   "repository": "git@github.com:Lucas-C/unicode-search.git",
@@ -10,10 +10,10 @@
   },
   "scripts": {
     "upgrade": "yarn upgrade --latest",
-    "transpile": "babel ./generateUnicodeDataJson.js --out-file ./generateUnicodeDataJson.bundle.js && babel ./unicode-search.js --out-file ./unicode-search.bundle.js",
-    "prepublish": "npm run transpile && npm run generateUnicodeDataJson",
-    "download": "wget \"https://unicode.org/Public/10.0.0/ucd/UnicodeData.txt\" -O UnicodeData.txt",
-    "generateUnicodeDataJson": "npm run download && node generateUnicodeDataJson.bundle.js",
+    "transpile": "babel ./generateDistJsons.js --out-file ./generateDistJsons.bundle.js && babel ./unicode-search.js --out-file ./unicode-search.bundle.js",
+    "prepublish": "npm run transpile && npm run generateDistJsons",
+    "download": "wget \"https://unicode.org/Public/10.0.0/ucd/UnicodeData.txt\" -O UnicodeData.txt && wget \"https://unicode.org/Public/10.0.0/ucd/Blocks.txt\" -O Blocks.txt",
+    "generateDistJsons": "npm run download && node generateDistJsons.bundle.js",
     "unicode-search": "node unicode-search.bundle.js"
   },
   "dependencies": {
