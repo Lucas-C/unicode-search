@@ -1,3 +1,5 @@
+[![](https://travis-ci.org/Lucas-C/unicode-search.svg?branch=master)](https://travis-ci.org/Lucas-C/unicode-search) 
+
 # unicode-search
 
 Command-line interface to search UTF8 characters by name from a JSON cache, without requiring an Internet connection.
