@@ -47,7 +47,7 @@ commander
   .parse(process.argv)
 
 let { block, category, keys } = commander
-const uppercaseKeyword = process.argv.pop().toUpperCase()
+const uppercaseKeyword = (commander.args[0] || '').toUpperCase()
 
 const unicodeData = require('./UnicodeData.json')
 const blocks = require('./Blocks.json')
@@ -66,7 +66,7 @@ const findBlockName = (codepoint) => {
 
 for (let uChar of Object.values(unicodeData)) {
   if (category && uChar.category !== category) continue
-  if (uChar.name.indexOf(uppercaseKeyword) < 0) continue
+  if (uppercaseKeyword && uChar.name.indexOf(uppercaseKeyword) < 0) continue
   uChar.block = findBlockName(uChar.value)
   if (block && uChar.block.toLowerCase() !== block.toLowerCase()) continue
   uChar.categoryHumanReadble = PRETTY_CATEGORY[uChar.category]
