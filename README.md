@@ -29,6 +29,9 @@ npm install -g unicode-search
 ```
 unicode-search -b Emoticons -k name,string "check mark"
 ```
+```
+unicode-search -b Emoticons -k name,string > all_emoticons.txt
+```
 
 ### Options
 
