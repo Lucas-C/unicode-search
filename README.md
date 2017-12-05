@@ -1,4 +1,5 @@
 [![](https://travis-ci.org/Lucas-C/unicode-search.svg?branch=master)](https://travis-ci.org/Lucas-C/unicode-search)
+[![Known Vulnerabilities](https://snyk.io/test/github/lucas-c/unicode-search/badge.svg)](https://snyk.io/test/github/lucas-c/unicode-search)
 
 # unicode-search
 
