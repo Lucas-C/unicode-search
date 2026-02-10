@@ -1,6 +1,6 @@
 {
   "name": "unicode-search",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Command-line interface to search unicode characters by keywords",
   "license": "GPL-3.0",
   "repository": "git@github.com:Lucas-C/unicode-search.git",

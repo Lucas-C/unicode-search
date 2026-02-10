@@ -1,4 +1,5 @@
-[![](https://travis-ci.org/Lucas-C/unicode-search.svg?branch=master)](https://travis-ci.org/Lucas-C/unicode-search)
+![NPM Version](https://img.shields.io/npm/v/unicode-search)
+[![Build status](https://github.com/Lucas-C/unicode-search/workflows/CI%20pipeline/badge.svg)](https://github.com/Lucas-C/unicode-search/actions/workflows/build.yml?query=branch%3Amaster)
 [![Known Vulnerabilities](https://snyk.io/test/github/lucas-c/unicode-search/badge.svg)](https://snyk.io/test/github/lucas-c/unicode-search)
 
 # unicode-search
