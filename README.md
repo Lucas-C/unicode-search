@@ -13,15 +13,14 @@ Online, I would recommend to use this tag-based searched: http://graphemica.com/
 
 
 ## Installation
-
-```
-yarn global add unicode-search
-```
-
- Or
-
 ```
 npm install -g unicode-search
+```
+
+You can also directly invoke `unicode-search` using `npx`:
+
+```
+npx unicode-search --help
 ```
 
 
