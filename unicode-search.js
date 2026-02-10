@@ -1,7 +1,4 @@
 #!/usr/bin/env node
-import 'core-js/modules/es7.object.values'
-import 'core-js/modules/es7.string.pad-start'
-
 const commander = require('commander')
 const pkg = require('./package.json')
 
