@@ -1,10 +1,5 @@
 {
   "presets": [
-    ["env", {
-      "targets": {
-        "node": "current"
-      },
-      "debug": true
-    }]
+    ["@babel/preset-env"]
   ]
 }
