@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const commander = require('commander')
-const pkg = require('./package.json')
+import commander, { version, args } from 'commander'
+import { version as _version } from './package.json'
 
 const PRETTY_CATEGORY = {
   Cc: 'Other, Control',
@@ -36,32 +36,31 @@ const PRETTY_CATEGORY = {
   Zs: 'Separator, Space'
 }
 
-commander
-  .version(pkg.version)
+version(_version)
   .option('-b, --block [name]', 'Filter by block name, e.g. "Emoticon"')
   .option('-c, --category [name]', 'Filter by category name, e.g. "So"')
   .option('-k, --keys [keys]', 'Output only the selected field(s), e.g. "name,string"')
   .parse(process.argv)
 
-let { block, category, keys } = commander
-const uppercaseKeyword = (commander.args[0] || '').toUpperCase()
+const { block, category, keys } = commander
+const uppercaseKeyword = (args[0] || '').toUpperCase()
 
-const unicodeData = require('./UnicodeData.json')
-const blocks = require('./Blocks.json')
+import unicodeData from './UnicodeData.json'
+import blocks from './Blocks.json'
 
 const findBlockName = (codepoint) => {
   // yes, dichotomic search would be faster
   // but we have only 260 entries
   codepoint = codepoint.padStart(6, '0')
   let index = -1
-  for (let block of blocks) {
+  for (const block of blocks) {
     if (block.rangeStart > codepoint) break
     index++
   }
   return blocks[index].blockName
 }
 
-for (let uChar of Object.values(unicodeData)) {
+for (const uChar of Object.values(unicodeData)) {
   if (category && uChar.category !== category) continue
   if (uppercaseKeyword && uChar.name.indexOf(uppercaseKeyword) < 0) continue
   uChar.block = findBlockName(uChar.value)
@@ -69,7 +68,7 @@ for (let uChar of Object.values(unicodeData)) {
   uChar.categoryHumanReadble = PRETTY_CATEGORY[uChar.category]
   uChar.string = String.fromCodePoint('0x' + uChar.value)
   if (keys) {
-    for (let key of keys.split(',')) {
+    for (const key of keys.split(',')) {
       console.log(uChar[key])
     }
   } else {

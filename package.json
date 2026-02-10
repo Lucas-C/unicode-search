@@ -9,20 +9,20 @@
     "unicode-search": "./unicode-search.bundle.js"
   },
   "scripts": {
-    "test": "standard",
+    "test": "standard --fix",
     "prepublish": "npm run transpile && npm run generateDistJsons",
     "transpile": "babel ./generateDistJsons.js --out-file ./generateDistJsons.bundle.js && babel ./unicode-search.js --out-file ./unicode-search.bundle.js",
     "generateDistJsons": "npm run download && node generateDistJsons.bundle.js",
     "download": "wget \"https://unicode.org/Public/10.0.0/ucd/UnicodeData.txt\" -O UnicodeData.txt && wget \"https://unicode.org/Public/10.0.0/ucd/Blocks.txt\" -O Blocks.txt"
   },
   "dependencies": {
-    "commander": "==2.11.0"
+    "commander": "^14.0.3"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.0",
+    "@babel/cli": "^7.28.6",
+    "@babel/preset-env": "^7.29.0",
     "bufferstream": "^0.6.2",
-    "standard": "^10.0.3"
+    "standard": "^17.1.2"
   },
   "files": [
     "unicode-search.js",
