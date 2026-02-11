@@ -1,6 +1,6 @@
 {
   "name": "unicode-search",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Command-line interface to search unicode characters by keywords",
   "license": "GPL-3.0",
   "repository": {
@@ -11,11 +11,13 @@
     "unicode-search": "unicode-search.bundle.js"
   },
   "scripts": {
-    "test": "standard --fix",
+    "test": "npm run lint && npm run transpile && node unicode-search.bundle.js --help",
+    "lint": "standard",
+    "lint:fix": "standard --fix",
     "prepublish": "npm run transpile && npm run generateDistJsons",
     "transpile": "babel ./generateDistJsons.js --out-file ./generateDistJsons.bundle.js && babel ./unicode-search.js --out-file ./unicode-search.bundle.js",
     "generateDistJsons": "npm run download && node generateDistJsons.bundle.js",
-    "download": "wget \"https://unicode.org/Public/10.0.0/ucd/UnicodeData.txt\" -O UnicodeData.txt && wget \"https://unicode.org/Public/10.0.0/ucd/Blocks.txt\" -O Blocks.txt"
+    "download": "wget \"https://unicode.org/Public/16.0.0/ucd/UnicodeData.txt\" -O UnicodeData.txt && wget \"https://unicode.org/Public/16.0.0/ucd/Blocks.txt\" -O Blocks.txt"
   },
   "dependencies": {
     "commander": "^14.0.3"

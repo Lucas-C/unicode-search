@@ -1,6 +1,9 @@
 #!/usr/bin/env node
-import commander, { version, args } from 'commander'
+import { program } from 'commander'
 import { version as _version } from './package.json'
+
+import unicodeData from './UnicodeData.json'
+import blocks from './Blocks.json'
 
 const PRETTY_CATEGORY = {
   Cc: 'Other, Control',
@@ -36,17 +39,15 @@ const PRETTY_CATEGORY = {
   Zs: 'Separator, Space'
 }
 
-version(_version)
+program.version(_version)
   .option('-b, --block [name]', 'Filter by block name, e.g. "Emoticon"')
   .option('-c, --category [name]', 'Filter by category name, e.g. "So"')
   .option('-k, --keys [keys]', 'Output only the selected field(s), e.g. "name,string"')
+  .argument('[keyword]')
   .parse(process.argv)
 
-const { block, category, keys } = commander
-const uppercaseKeyword = (args[0] || '').toUpperCase()
-
-import unicodeData from './UnicodeData.json'
-import blocks from './Blocks.json'
+const { block, category, keys, keyword } = program.opts()
+const uppercaseKeyword = (keyword || '').toUpperCase()
 
 const findBlockName = (codepoint) => {
   // yes, dichotomic search would be faster
