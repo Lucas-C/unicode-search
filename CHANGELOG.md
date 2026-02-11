@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [1.1.3] - 2026-02-11
+## [1.1.4] - 2026-02-11
 ### Fixed
 * `Error: Cannot find module './Blocks.json'`
 

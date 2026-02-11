@@ -59,7 +59,7 @@ _cf._ [CHANGELOG.md](CHANGELOG.md)
 
 # Release checklist
 1. `version=1.X.Y`
-1. `sed -i "s/\"version\": \"1.\+\"/\"version\": \"$version\"/" package.json`
+1. `sed -i "s/\"version\": \"1.\+\"/\"version\": \"$version\"/" package.json && npm install`
 1. `npm pack --dry-run && npm publish` to upload on [npmjs.com](https://www.npmjs.com/package/unicode-search)
 1. Edit `CHANGELOG.md` to add the release date for `$version`
 1. `git commit -am "New release: $version" && git push && git tag $version && git push --tags`
