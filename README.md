@@ -3,7 +3,6 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/lucas-c/unicode-search/badge.svg)](https://snyk.io/test/github/lucas-c/unicode-search)
 
 # unicode-search
-
 Command-line interface to search UTF8 characters by name from a JSON cache, without requiring an Internet connection.
 
 https://www.npmjs.com/package/unicode-search
@@ -26,7 +25,6 @@ npx unicode-search --help
 
 
 ## Usage
-
 ```
 unicode-search -b Emoticons -k name,string "check mark"
 ```
@@ -35,7 +33,6 @@ unicode-search -b Emoticons -k name,string > all_emoticons.txt
 ```
 
 ### Options
-
 Please run the following command to see the latest options:
 
 ```
@@ -57,8 +54,12 @@ The following is for your quick reference (may not be the latest version):
     -h, --help             output usage information
 ```
 
+# Release notes
+_cf._ [CHANGELOG.md](CHANGELOG.md)
+
 # Release checklist
 1. `version=1.X.Y`
 1. `sed -i "s/\"version\": \"1.\+\"/\"version\": \"$version\"/" package.json`
 1. `npm pack --dry-run && npm publish` to upload on [npmjs.com](https://www.npmjs.com/package/unicode-search)
+1. Edit `CHANGELOG.md` to add the release date for `$version`
 1. `git commit -am "New release: $version" && git push && git tag $version && git push --tags`

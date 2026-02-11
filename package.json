@@ -1,6 +1,6 @@
 {
   "name": "unicode-search",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Command-line interface to search unicode characters by keywords",
   "license": "GPL-3.0",
   "repository": {
@@ -29,6 +29,7 @@
     "standard": "^17.1.2"
   },
   "files": [
+    "Blocks.json",
     "unicode-search.bundle.js",
     "UnicodeData.json"
   ],
