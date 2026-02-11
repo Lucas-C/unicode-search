@@ -3,10 +3,12 @@
   "version": "1.1.1",
   "description": "Command-line interface to search unicode characters by keywords",
   "license": "GPL-3.0",
-  "repository": "git@github.com:Lucas-C/unicode-search.git",
+  "repository": {
+    "url": "git+ssh://git@github.com/Lucas-C/unicode-search.git"
+  },
   "author": "Lucas Cimon <lucas.cimon@gmail.com>",
   "bin": {
-    "unicode-search": "./unicode-search.bundle.js"
+    "unicode-search": "unicode-search.bundle.js"
   },
   "scripts": {
     "test": "standard --fix",
@@ -25,7 +27,6 @@
     "standard": "^17.1.2"
   },
   "files": [
-    "unicode-search.js",
     "unicode-search.bundle.js",
     "UnicodeData.json"
   ],

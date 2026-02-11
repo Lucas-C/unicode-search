@@ -1,4 +1,4 @@
-![NPM Version](https://img.shields.io/npm/v/unicode-search)
+[![NPM Version](https://img.shields.io/npm/v/unicode-search)](https://www.npmjs.com/package/unicode-search)
 [![Build status](https://github.com/Lucas-C/unicode-search/workflows/CI%20pipeline/badge.svg)](https://github.com/Lucas-C/unicode-search/actions/workflows/build.yml?query=branch%3Amaster)
 [![Known Vulnerabilities](https://snyk.io/test/github/lucas-c/unicode-search/badge.svg)](https://snyk.io/test/github/lucas-c/unicode-search)
 
@@ -56,3 +56,9 @@ The following is for your quick reference (may not be the latest version):
     -k, --keys [keys]      Output only the selected field(s), e.g. "name,string"
     -h, --help             output usage information
 ```
+
+# Release checklist
+1. `version=1.X.Y`
+1. `sed -i "s/\"version\": \"1.\+\"/\"version\": \"$version\"/" package.json`
+1. `npm pack --dry-run && npm publish` to upload on [npmjs.com](https://www.npmjs.com/package/unicode-search)
+1. `git commit -am "New release: $version" && git push && git tag $version && git push --tags`
